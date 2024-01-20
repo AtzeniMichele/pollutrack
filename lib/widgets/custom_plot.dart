@@ -25,12 +25,12 @@ class CustomPlot extends StatelessWidget {
             accessor: (Map map) => map['points'] as num,
           ),
         },
-        elements: <GeomElement<Shape>>[
-          LineElement(
+        marks: <Mark<Shape>>[
+          LineMark(
             position: Varset('date') * Varset('points'),
-            shape: ShapeAttr(value: BasicLineShape(smooth: true)),
-            size: SizeAttr(value: 2),
-            color: ColorAttr(value: const Color(0xFF83AA99)),
+            shape: ShapeEncode(value: BasicLineShape(smooth: true)),
+            size: SizeEncode(value: 2),
+            color: ColorEncode(value: const Color(0xFF83AA99)),
           )
         ],
         axes: [
